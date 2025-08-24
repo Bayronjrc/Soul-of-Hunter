@@ -1,4 +1,4 @@
-package com.by.soh
+package com.by.soh.activities
 
 
 import android.R
