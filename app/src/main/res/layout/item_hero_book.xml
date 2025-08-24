@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@color/background_card">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="8dp">
+
+        <!-- Hero Image Container -->
+        <FrameLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="4dp">
+
+            <!-- Background for rarity -->
+            <View
+                android:id="@+id/rarity_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rarity_common_bg" />
+
+            <!-- Hero Image -->
+            <ImageView
+                android:id="@+id/hero_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ichigo_icon"
+                android:scaleType="centerCrop" />
+
+            <!-- Lock Overlay for locked heroes -->
+            <ImageView
+                android:id="@+id/lock_overlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/lock_overlay"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <!-- Enhancement Level -->
+            <TextView
+                android:id="@+id/enhancement_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+0"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:background="@drawable/semi_transparent_background"
+                android:padding="2dp"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="2dp" />
+
+        </FrameLayout>
+
+        <!-- Hero Name -->
+        <TextView
+            android:id="@+id/hero_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ichigo"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginBottom="2dp" />
+
+        <!-- Stars -->
+        <LinearLayout
+            android:id="@+id/stars_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="2dp">
+
+            <ImageView
+                android:id="@+id/star_1"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:src="@drawable/star_empty"
+                android:layout_marginEnd="1dp" />
+
+            <ImageView
+                android:id="@+id/star_2"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:src="@drawable/star_empty"
+                android:layout_marginEnd="1dp" />
+
+            <ImageView
+                android:id="@+id/star_3"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:src="@drawable/star_empty"
+                android:layout_marginEnd="1dp" />
+
+            <ImageView
+                android:id="@+id/star_4"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:src="@drawable/star_empty"
+                android:layout_marginEnd="1dp" />
+
+            <ImageView
+                android:id="@+id/star_5"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:src="@drawable/star_empty" />
+
+        </LinearLayout>
+
+        <!-- Faction/Attribute -->
+        <TextView
+            android:id="@+id/hero_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shinigami"
+            android:textColor="@color/faction_shinigami"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:maxLines="1" />
+
+        <!-- Fragments (if not owned) -->
+        <TextView
+            android:id="@+id/fragment_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0/20"
+            android:textColor="@color/text_hint"
+            android:textSize="9sp"
+            android:gravity="center"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

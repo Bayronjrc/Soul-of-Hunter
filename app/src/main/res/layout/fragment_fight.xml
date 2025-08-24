@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_background">
+
+    <!-- Top Controls -->
+    <LinearLayout
+        android:id="@+id/top_controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Battle Speed Controls -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/button_background"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/speed_1x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1x"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:padding="6dp"
+                android:background="@drawable/button_background"
+                android:layout_marginEnd="4dp" />
+
+            <TextView
+                android:id="@+id/speed_2x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2x"
+                android:textColor="@color/text_hint"
+                android:textSize="12sp"
+                android:padding="6dp"
+                android:layout_marginEnd="4dp" />
+
+            <TextView
+                android:id="@+id/speed_4x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4x"
+                android:textColor="@color/text_hint"
+                android:textSize="12sp"
+                android:padding="6dp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <!-- AFK Skip Button -->
+        <Button
+            android:id="@+id/afk_skip_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AFK Skip\n(2hrs)"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:background="@drawable/button_background"
+            android:padding="8dp" />
+
+        <!-- Switch/Map Button -->
+        <Button
+            android:id="@+id/switch_map_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Switch"
+            android:textColor="@color/white"
+            android:background="@drawable/button_background"
+            android:padding="8dp"
+            android:layout_marginStart="8dp" />
+
+    </LinearLayout>
+
+    <!-- Chapter Title -->
+    <TextView
+        android:id="@+id/chapter_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="The Day I Became a Shinigami"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:padding="12dp"
+        android:background="@drawable/reward_preview_background"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/top_controls" />
+
+    <!-- Battle Area -->
+    <LinearLayout
+        android:id="@+id/battle_area"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/chapter_title"
+        app:layout_constraintBottom_toTopOf="@id/battle_controls">
+
+        <!-- Enemy Formation (Top) -->
+        <LinearLayout
+            android:id="@+id/enemy_formation"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@drawable/area_button_background"
+            android:padding="16dp"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enemy\nFormation"
+                android:textColor="@color/red_hollow"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:layout_marginEnd="16dp" />
+
+            <!-- Enemy Slots -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <!-- Enemy Back Line -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginBottom="8dp">
+
+                    <ImageView
+                        android:id="@+id/enemy_slot_2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/enemy_placeholder"
+                        android:background="@drawable/circular_frame"
+                        android:layout_marginEnd="8dp"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/enemy_slot_3"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/enemy_placeholder"
+                        android:background="@drawable/circular_frame"
+                        android:layout_marginHorizontal="4dp"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/enemy_slot_4"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/enemy_placeholder"
+                        android:background="@drawable/circular_frame"
+                        android:layout_marginStart="8dp"
+                        android:scaleType="centerCrop" />
+
+                </LinearLayout>
+
+                <!-- Enemy Front Line -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/enemy_slot_0"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/boss_enemy"
+                        android:background="@drawable/circular_frame"
+                        android:layout_marginEnd="16dp"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/enemy_slot_1"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/enemy_placeholder"
+                        android:background="@drawable/circular_frame"
+                        android:layout_marginStart="16dp"
+                        android:scaleType="centerCrop" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Enemy Info -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:id="@+id/enemy_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enemy Lv.1"
+                    android:textColor="@color/red_hollow"
+                    android:textStyle="bold"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/enemy_power"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Power: 500"
+                    android:textColor="@color/orange"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- VS Divider -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="VS"
+            android:textColor="@color/gold"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:layout_marginVertical="8dp" />
+
+        <!-- Player Formation (Bottom) -->
+        <LinearLayout
+            android:id="@+id/player_formation"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@drawable/area_button_background"
+            android:padding="16dp"
+            android:layout_marginTop="8dp">
+
+            <!-- Player Info -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginEnd="16dp">
+
+                <TextView
+                    android:id="@+id/player_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Player Lv.2"
+                    android:textColor="@color/blue_spiritual"
+                    android:textStyle="bold"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/player_power"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Power: 657"
+                    android:textColor="@color/orange"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <!-- Player Slots -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <!-- Player Front Line -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginBottom="8dp">
+
+                    <ImageView
+                        android:id="@+id/player_slot_0"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ichigo_icon"
+                        android:background="@drawable/circular_frame"
+                        android:layout_marginEnd="16dp"
+                        android:scaleType="centerCrop" />
+
+                    <FrameLayout
+                        android:id="@+id/player_slot_1"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/equipment_slot_background"
+                        android:layout_marginStart="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+"
+                            android:textColor="@color/text_hint"
+                            android:textSize="20sp"
+                            android:layout_gravity="center" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <!-- Player Back Line -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <FrameLayout
+                        android:id="@+id/player_slot_2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/equipment_slot_background"
+                        android:layout_marginEnd="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+"
+                            android:textColor="@color/text_hint"
+                            android:textSize="16sp"
+                            android:layout_gravity="center" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/player_slot_3"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/equipment_slot_background"
+                        android:layout_marginHorizontal="4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+"
+                            android:textColor="@color/text_hint"
+                            android:textSize="16sp"
+                            android:layout_gravity="center" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/player_slot_4"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/equipment_slot_background"
+                        android:layout_marginStart="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+"
+                            android:textColor="@color/text_hint"
+                            android:textSize="16sp"
+                            android:layout_gravity="center" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player\nFormation"
+                android:textColor="@color/blue_spiritual"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:layout_marginStart="16dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Battle Controls -->
+    <LinearLayout
+        android:id="@+id/battle_controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Auto Battle Toggle -->
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/auto_battle_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Auto Battle"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:checked="true"
+            android:layout_marginEnd="16dp" />
+
+        <!-- Start Battle Button -->
+        <Button
+            android:id="@+id/start_battle_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="START BATTLE"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:background="@drawable/button_background"
+            android:padding="12dp"
+            android:layout_marginHorizontal="16dp" />
+
+        <!-- Retry Button -->
+        <Button
+            android:id="@+id/retry_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Retry"
+            android:textColor="@color/white"
+            android:background="@drawable/button_background"
+            android:padding="8dp"
+            android:layout_marginStart="16dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
