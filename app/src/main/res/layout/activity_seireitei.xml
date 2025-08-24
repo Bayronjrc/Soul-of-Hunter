@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/seireitei_background">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/seireitei_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/top_bar_background"
+        android:padding="12dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/seireitei_back_button"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/back_arrow"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="6dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Seireitei"
+            android:textColor="@color/blue_spiritual"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/seireitei_help_button"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/help_icon"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="6dp" />
+
+    </LinearLayout>
+
+    <!-- Main Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/seireitei_header"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Hero Selection -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/hero_card_background"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select Hero to Awaken"
+                    android:textColor="@color/gold"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Selected Hero Display -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:background="@drawable/reward_preview_background"
+                    android:padding="12dp"
+                    android:layout_marginBottom="16dp">
+
+                    <!-- Current Form -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/awakening_current_hero"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/ichigo_base"
+                            android:background="@drawable/circular_frame"
+                            android:scaleType="centerCrop"
+                            android:layout_marginBottom="8dp" />
+
+                        <TextView
+                            android:id="@+id/awakening_current_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ichigo +7"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Current Form"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/arrow_right"
+                        android:layout_marginHorizontal="16dp" />
+
+                    <!-- Awakened Form -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/awakening_final_hero"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/ichigo_mugetsu"
+                            android:background="@drawable/circular_frame_gold"
+                            android:scaleType="centerCrop"
+                            android:layout_marginBottom="8dp" />
+
+                        <TextView
+                            android:id="@+id/awakening_final_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mugetsu Ichigo"
+                            android:textColor="@color/gold"
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Awakened Form"
+                            android:textColor="@color/gold"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Awakening Requirements -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Awakening Requirements"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:layout_marginBottom="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="• Enhancement +7 or higher\n• 100 Soul Fragments\n• 50 Awakening Crystals"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:layout_marginEnd="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="✓"
+                            android:textColor="@color/exp_green"
+                            android:textStyle="bold"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="✓"
+                            android:textColor="@color/exp_green"
+                            android:textStyle="bold"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="✗"
+                            android:textColor="@color/red_hollow"
+                            android:textStyle="bold"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Awakening Materials -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/reward_preview_background"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Required Materials"
+                    android:textColor="@color/gold"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:layout_marginBottom="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <!-- Material 1 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <FrameLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginBottom="4dp">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/soul_fragment"
+                                android:background="@drawable/rarity_legendary_bg"
+                                android:scaleType="centerCrop" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="100/100"
+                                android:textColor="@color/white"
+                                android:textSize="9sp"
+                                android:textStyle="bold"
+                                android:background="@color/semi_transparent_black"
+                                android:padding="2dp"
+                                android:layout_gravity="bottom|center" />
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Soul Fragment"
+                            android:textColor="@color/white"
+                            android:textSize="10sp"
+                            android:gravity="center" />
+
+                    </LinearLayout>
+
+                    <!-- Material 2 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <FrameLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginBottom="4dp">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/awakening_crystal"
+                                android:background="@drawable/rarity_mythic_bg"
+                                android:scaleType="centerCrop" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="25/50"
+                                android:textColor="@color/white"
+                                android:textSize="9sp"
+                                android:textStyle="bold"
+                                android:background="@color/semi_transparent_black"
+                                android:padding="2dp"
+                                android:layout_gravity="bottom|center" />
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Awakening Crystal"
+                            android:textColor="@color/white"
+                            android:textSize="10sp"
+                            android:gravity="center" />
+
+                    </LinearLayout>
+
+                    <!-- Material 3 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <FrameLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginBottom="4dp">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/hogyoku_fragment"
+                                android:background="@drawable/rarity_mythic_bg"
+                                android:scaleType="centerCrop" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0/10"
+                                android:textColor="@color/white"
+                                android:textSize="9sp"
+                                android:textStyle="bold"
+                                android:background="@color/semi_transparent_black"
+                                android:padding="2dp"
+                                android:layout_gravity="bottom|center" />
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hogyoku Fragment"
+                            android:textColor="@color/white"
+                            android:textSize="10sp"
+                            android:gravity="center" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- New Abilities Preview -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/area_button_background"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="New Abilities After Awakening"
+                    android:textColor="@color/gold"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Unlocks Ultimate Skill: Final Getsuga Tensho\n• +200% Base ATK\n• Immune to all debuffs\n• Regenerates 5% HP per turn\n• New Passive: Transcendent Power"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="2dp" />
+
+            </LinearLayout>
+
+            <!-- Awakening Button -->
+            <Button
+                android:id="@+id/awaken_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AWAKEN HERO"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:background="@drawable/button_danger"
+                android:padding="14dp"
+                android:enabled="false" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

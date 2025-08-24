@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/hero_card_background"
+    android:padding="16dp">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Advanced"
+            android:textColor="@color/gold"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/advanced_close_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/close_icon"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="4dp" />
+
+    </LinearLayout>
+
+    <!-- Before and After Comparison -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@drawable/reward_preview_background"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp">
+
+        <!-- Before -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/advanced_before_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ichigo_base"
+                android:background="@drawable/circular_frame"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/advanced_before_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ichigo"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="4dp" />
+
+            <!-- Before Stats -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ATK: 38"
+                    android:textColor="@color/orange"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="P.DEF: 15"
+                    android:textColor="@color/blue_spiritual"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="M.DEF: 15"
+                    android:textColor="@color/blue_spiritual"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HP: 251"
+                    android:textColor="@color/health_red"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SPD: 38"
+                    android:textColor="@color/yellow"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Arrow -->
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/arrow_right"
+            android:layout_marginHorizontal="16dp" />
+
+        <!-- After -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/advanced_after_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ichigo_evolved"
+                android:background="@drawable/circular_frame_gold"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/advanced_after_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ichigo+1"
+                android:textColor="@color/gold"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="4dp" />
+
+            <!-- After Stats -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ATK: 114"
+                    android:textColor="@color/orange"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="P.DEF: 44"
+                    android:textColor="@color/blue_spiritual"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="M.DEF: 46"
+                    android:textColor="@color/blue_spiritual"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HP: 752"
+                    android:textColor="@color/health_red"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SPD: 115"
+                    android:textColor="@color/yellow"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Awakening Skill Preview -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/reward_preview_background"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Awakening skill: "
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:id="@+id/awakening_skill_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blue Fire"
+            android:textColor="@color/blue_spiritual"
+            android:textStyle="bold"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <!-- Materials Required -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/reward_preview_background"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Advance Material"
+            android:textColor="@color/gold"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginBottom="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!-- Material 1 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <FrameLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="4dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/crystal_material"
+                        android:background="@drawable/rarity_rare_bg"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10/5"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:background="@color/semi_transparent_black"
+                        android:padding="2dp"
+                        android:layout_gravity="bottom|center" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Crystal"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+            <!-- Material 2 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <FrameLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="4dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/tome_material"
+                        android:background="@drawable/rarity_epic_bg"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4/3"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:background="@color/semi_transparent_black"
+                        android:padding="2dp"
+                        android:layout_gravity="bottom|center" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tome"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+            <!-- Empty Slot -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/empty_slot"
+                    android:background="@drawable/equipment_slot_background"
+                    android:scaleType="centerCrop"
+                    android:layout_marginBottom="4dp"
+                    android:alpha="0.5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textColor="@color/text_hint"
+                    android:textSize="10sp"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+            <!-- Empty Slot -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/empty_slot"
+                    android:background="@drawable/equipment_slot_background"
+                    android:scaleType="centerCrop"
+                    android:layout_marginBottom="4dp"
+                    android:alpha="0.5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textColor="@color/text_hint"
+                    android:textSize="10sp"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Action Button -->
+    <Button
+        android:id="@+id/all_advance_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="All Advance"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:background="@drawable/button_background"
+        android:padding="12dp" />
+
+</LinearLayout>

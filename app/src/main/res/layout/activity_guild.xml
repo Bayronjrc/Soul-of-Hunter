@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/guild_background">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/guild_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/top_bar_background"
+        android:padding="12dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/guild_back_button"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/back_arrow"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="6dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Gotei 13 Guild"
+            android:textColor="@color/gold"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/guild_settings_button"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/settings_icon"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="6dp" />
+
+    </LinearLayout>
+
+    <!-- Guild Info Banner -->
+    <LinearLayout
+        android:id="@+id/guild_info_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/guild_banner_bg"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toBottomOf="@id/guild_header">
+
+        <!-- Guild Logo -->
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/gotei_13_logo"
+            android:background="@drawable/circular_frame_gold"
+            android:scaleType="centerCrop"
+            android:layout_marginEnd="16dp" />
+
+        <!-- Guild Details -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gotei 13"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Level 5 • Members: 28/30"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                android:layout_marginTop="2dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Guild Power: 125,430"
+                android:textColor="@color/orange"
+                android:textSize="12sp"
+                android:layout_marginTop="2dp" />
+
+        </LinearLayout>
+
+        <!-- Guild Rank -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rank #7"
+                android:textColor="@color/gold"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/guild_rank_silver"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Guild Activities -->
+    <LinearLayout
+        android:id="@+id/guild_activities"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toBottomOf="@id/guild_info_banner">
+
+        <!-- Ghost Intrusion -->
+        <LinearLayout
+            android:id="@+id/guild_ghost_intrusion"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/guild_activity_bg"
+            android:padding="8dp"
+            android:layout_marginEnd="4dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ghost_intrusion_icon"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ghost\nIntrusion"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Active"
+                android:textColor="@color/exp_green"
+                android:textSize="8sp"
+                android:layout_marginTop="2dp" />
+
+        </LinearLayout>
+
+        <!-- Rukongai -->
+        <LinearLayout
+            android:id="@+id/guild_rukongai"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/guild_activity_bg"
+            android:padding="8dp"
+            android:layout_marginHorizontal="2dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/rukongai_icon"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rukongai"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Available"
+                android:textColor="@color/yellow"
+                android:textSize="8sp"
+                android:layout_marginTop="2dp" />
+
+        </LinearLayout>
+
+        <!-- Guild War -->
+        <LinearLayout
+            android:id="@+id/guild_war"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/guild_activity_bg"
+            android:padding="8dp"
+            android:layout_marginStart="4dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/guild_war_icon"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Guild\nWar"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tomorrow"
+                android:textColor="@color/text_hint"
+                android:textSize="8sp"
+                android:layout_marginTop="2dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Guild Tabs -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/guild_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/reward_preview_background"
+        app:tabTextColor="@color/text_secondary"
+        app:tabSelectedTextColor="@color/gold"
+        app:tabIndicatorColor="@color/gold"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/guild_activities">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Members" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chat" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Donations" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shop" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <!-- ViewPager for Guild Content -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/guild_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toBottomOf="@id/guild_tab_layout"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_background"
+    android:padding="16dp">
+
+    <!-- Formation Slots Header -->
+    <LinearLayout
+        android:id="@+id/formation_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Current Hero Icon -->
+        <ImageView
+            android:id="@+id/current_hero_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ichigo_icon"
+            android:background="@drawable/circular_frame" />
+
+        <!-- Formation Slots -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginStart="16dp">
+
+            <TextView
+                android:id="@+id/slot_level_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lv 5"
+                android:textColor="@color/text_hint"
+                android:textSize="12sp"
+                android:background="@drawable/button_background"
+                android:padding="6dp"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/slot_level_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lv 10"
+                android:textColor="@color/text_hint"
+                android:textSize="12sp"
+                android:background="@drawable/button_background"
+                android:padding="6dp"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/slot_level_15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lv 15"
+                android:textColor="@color/text_hint"
+                android:textSize="12sp"
+                android:background="@drawable/button_background"
+                android:padding="6dp"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/slot_level_20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lv 20"
+                android:textColor="@color/text_hint"
+                android:textSize="12sp"
+                android:background="@drawable/button_background"
+                android:padding="6dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/formation_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Formation"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:background="@drawable/button_background"
+            android:padding="8dp"
+            android:layout_marginStart="16dp" />
+
+    </LinearLayout>
+
+    <!-- Formation Grid -->
+    <LinearLayout
+        android:id="@+id/formation_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/formation_header">
+
+        <!-- Front Line -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Front Line"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_marginEnd="16dp" />
+
+            <FrameLayout
+                android:id="@+id/formation_slot_0"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/equipment_slot_background"
+                android:layout_marginEnd="16dp">
+
+                <ImageView
+                    android:id="@+id/hero_slot_0"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/add_hero_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:textColor="@color/text_hint"
+                    android:textSize="24sp"
+                    android:layout_gravity="center" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/formation_slot_1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/equipment_slot_background">
+
+                <ImageView
+                    android:id="@+id/hero_slot_1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/add_hero_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:textColor="@color/text_hint"
+                    android:textSize="24sp"
+                    android:layout_gravity="center" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <!-- Back Line -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back Line"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_marginEnd="16dp" />
+
+            <FrameLayout
+                android:id="@+id/formation_slot_2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/equipment_slot_background"
+                android:layout_marginEnd="8dp">
+
+                <ImageView
+                    android:id="@+id/hero_slot_2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/add_hero_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:textColor="@color/text_hint"
+                    android:textSize="20sp"
+                    android:layout_gravity="center" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/formation_slot_3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/equipment_slot_background"
+                android:layout_marginHorizontal="4dp">
+
+                <ImageView
+                    android:id="@+id/hero_slot_3"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/add_hero_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:textColor="@color/text_hint"
+                    android:textSize="20sp"
+                    android:layout_gravity="center" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/formation_slot_4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/equipment_slot_background"
+                android:layout_marginStart="8dp">
+
+                <ImageView
+                    android:id="@+id/hero_slot_4"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/add_hero_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:textColor="@color/text_hint"
+                    android:textSize="20sp"
+                    android:layout_gravity="center" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Main Content Area -->
+    <LinearLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/formation_container"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Equipment Slots Left -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginEnd="16dp">
+
+            <FrameLayout
+                android:id="@+id/equipment_slot_1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/equipment_slot_background"
+                android:layout_marginBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/equipment_1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:textColor="@color/text_hint"
+                    android:textSize="24sp"
+                    android:layout_gravity="center" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/equipment_slot_2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/equipment_slot_background"
+                android:layout_marginBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/equipment_2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:textColor="@color/text_hint"
+                    android:textSize="24sp"
+                    android:layout_gravity="center" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/equipment_slot_3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/equipment_slot_background">
+
+                <ImageView
+                    android:id="@+id/equipment_3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:textColor="@color/text_hint"
+                    android:textSize="24sp"
+                    android:layout_gravity="center" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <!-- Center Hero Display -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!-- Hero Display -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/hero_card_background"
+                android:padding="16dp">
+
+                <!-- Stars -->
+                <LinearLayout
+                    android:id="@+id/hero_stars"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginBottom="8dp">
+
+                    <ImageView
+                        android:id="@+id/star_1"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/star_empty"
+                        android:layout_marginEnd="2dp" />
+
+                    <ImageView
+                        android:id="@+id/star_2"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/star_empty"
+                        android:layout_marginEnd="2dp" />
+
+                    <ImageView
+                        android:id="@+id/star_3"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/star_empty"
+                        android:layout_marginEnd="2dp" />
+
+                    <ImageView
+                        android:id="@+id/star_4"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/star_empty"
+                        android:layout_marginEnd="2dp" />
+
+                    <ImageView
+                        android:id="@+id/star_5"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/star_empty" />
+
+                </LinearLayout>
+
+                <!-- Hero Sprite -->
+                <ImageView
+                    android:id="@+id/hero_sprite"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/ichigo_sprite"
+                    android:scaleType="centerCrop"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Hero Name and Type -->
+                <TextView
+                    android:id="@+id/hero_name_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ichigo/Core"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="4dp" />
+
+                <!-- Position -->
+                <TextView
+                    android:id="@+id/hero_position"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Front"
+                    android:textColor="@color/gold"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Switch Button -->
+                <Button
+                    android:id="@+id/switch_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Switch"
+                    android:textColor="@color/white"
+                    android:background="@drawable/button_background"
+                    android:padding="8dp"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Stats -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/reward_preview_background"
+                    android:padding="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="LV: "
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/hero_level"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textColor="@color/yellow"
+                            android:textSize="12sp"
+                            android:layout_marginEnd="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="EXP: "
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/hero_exp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3/6"
+                            android:textColor="@color/exp_green"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="HP: "
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/hero_hp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="251"
+                            android:textColor="@color/health_red"
+                            android:textSize="12sp"
+                            android:layout_marginEnd="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SPEED: "
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/hero_speed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="38"
+                            android:textColor="@color/yellow"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ATK: "
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/hero_atk"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="38"
+                            android:textColor="@color/orange"
+                            android:textSize="12sp"
+                            android:layout_marginEnd="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="M.DEF: "
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/hero_mdef"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="15"
+                            android:textColor="@color/blue_spiritual"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="P.DEF: "
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/hero_pdef"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="15"
+                            android:textColor="@color/blue_spiritual"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Action Buttons -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="16dp">
+
+                <Button
+                    android:id="@+id/upstar_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upstar"
+                    android:textColor="@color/white"
+                    android:background="@drawable/button_background"
+                    android:padding="8dp"
+                    android:layout_marginEnd="8dp" />
+
+                <Button
+                    android:id="@+id/advanced_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Advanced"
+                    android:textColor="@color/white"
+                    android:background="@drawable/button_background"
+                    android:padding="8dp"
+                    android:layout_marginEnd="8dp" />
+
+                <Button
+                    android:id="@+id/hogyoku_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hogyoku"
+                    android:textColor="@color/white"
+                    android:background="@drawable/button_background"
+                    android:padding="8dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Equipment Slots Right -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginStart="16dp">
+
+            <FrameLayout
+                android:id="@+id/equipment_slot_4"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/equipment_slot_background"
+                android:layout_marginBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/equipment_4"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:textColor="@color/text_hint"
+                    android:textSize="24sp"
+                    android:layout_gravity="center" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/equipment_slot_5"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/equipment_slot_background"
+                android:layout_marginBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/equipment_5"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:textColor="@color/text_hint"
+                    android:textSize="24sp"
+                    android:layout_gravity="center" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/equipment_slot_6"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/equipment_slot_background">
+
+                <ImageView
+                    android:id="@+id/equipment_6"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:textColor="@color/text_hint"
+                    android:textSize="24sp"
+                    android:layout_gravity="center" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

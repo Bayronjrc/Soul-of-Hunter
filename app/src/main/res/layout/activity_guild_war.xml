@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/guild_war_background">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/guild_war_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/top_bar_background"
+        android:padding="12dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/guild_war_back_button"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/back_arrow"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="6dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Guild War"
+            android:textColor="@color/red_hollow"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/war_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ACTIVE"
+            android:textColor="@color/exp_green"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:background="@drawable/status_badge"
+            android:padding="6dp" />
+
+    </LinearLayout>
+
+    <!-- War Map -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="12dp"
+        app:layout_constraintTop_toBottomOf="@id/guild_war_header"
+        app:layout_constraintBottom_toTopOf="@id/guild_war_bottom_info">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Battle Map -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:orientation="vertical"
+                android:background="@drawable/war_map_bg"
+                android:padding="20dp">
+
+                <!-- Top Row - Enemy Territory -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:background="@drawable/enemy_territory_bg"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Enemy Guild: Shadow Arrancar"
+                        android:textColor="@color/red_hollow"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:layout_marginEnd="16dp" />
+
+                    <!-- Enemy Fortresses -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/enemy_fortress_1"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/enemy_fortress"
+                            android:background="@drawable/fortress_red_bg"
+                            android:layout_marginEnd="8dp" />
+
+                        <ImageView
+                            android:id="@+id/enemy_fortress_2"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/enemy_fortress"
+                            android:background="@drawable/fortress_red_bg"
+                            android:layout_marginEnd="8dp" />
+
+                        <ImageView
+                            android:id="@+id/enemy_fortress_3"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/enemy_fortress"
+                            android:background="@drawable/fortress_red_bg" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Middle Row - Contested Zone -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:background="@drawable/contested_zone_bg"
+                    android:padding="16dp">
+
+                    <!-- Battle Points -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/battle_point_1"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/neutral_tower"
+                            android:background="@drawable/tower_neutral_bg"
+                            android:layout_marginBottom="8dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tower A"
+                            android:textColor="@color/white"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginHorizontal="20dp">
+
+                        <ImageView
+                            android:id="@+id/battle_point_2"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/central_fortress"
+                            android:background="@drawable/fortress_contested_bg"
+                            android:layout_marginBottom="8dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Central Keep"
+                            android:textColor="@color/gold"
+                            android:textStyle="bold"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/battle_point_3"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ally_tower"
+                            android:background="@drawable/tower_blue_bg"
+                            android:layout_marginBottom="8dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tower B"
+                            android:textColor="@color/white"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Bottom Row - Allied Territory -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:background="@drawable/ally_territory_bg"
+                    android:padding="8dp">
+
+                    <!-- Allied Fortresses -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginEnd="16dp">
+
+                        <ImageView
+                            android:id="@+id/ally_fortress_1"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ally_fortress"
+                            android:background="@drawable/fortress_blue_bg"
+                            android:layout_marginEnd="8dp" />
+
+                        <ImageView
+                            android:id="@+id/ally_fortress_2"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ally_fortress"
+                            android:background="@drawable/fortress_blue_bg"
+                            android:layout_marginEnd="8dp" />
+
+                        <ImageView
+                            android:id="@+id/ally_fortress_3"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ally_fortress"
+                            android:background="@drawable/fortress_blue_bg" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Our Guild: Gotei 13"
+                        android:textColor="@color/blue_spiritual"
+                        android:textStyle="bold"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- War Stats -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/hero_card_background"
+                android:padding="16dp"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="War Statistics"
+                    android:textColor="@color/gold"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Score Comparison -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/reward_preview_background"
+                    android:padding="12dp"
+                    android:layout_marginBottom="8dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gotei 13"
+                            android:textColor="@color/blue_spiritual"
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/ally_score"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1,250"
+                            android:textColor="@color/blue_spiritual"
+                            android:textStyle="bold"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="VS"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginHorizontal="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Shadow Arrancar"
+                            android:textColor="@color/red_hollow"
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/enemy_score"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="980"
+                            android:textColor="@color/red_hollow"
+                            android:textStyle="bold"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Personal Stats -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Your Contribution: 45 points"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Battles: 3/5"
+                        android:textColor="@color/orange"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Bottom Info -->
+    <LinearLayout
+        android:id="@+id/guild_war_bottom_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/bottom_nav_background"
+        android:padding="12dp"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- War Timer -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="War ends in:"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/war_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01:45:30"
+                android:textColor="@color/orange"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <!-- Action Buttons -->
+        <Button
+            android:id="@+id/view_battles_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Battles"
+            android:textColor="@color/white"
+            android:background="@drawable/button_secondary"
+            android:padding="8dp"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/join_battle_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JOIN BATTLE"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="@drawable/button_danger"
+            android:padding="10dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
