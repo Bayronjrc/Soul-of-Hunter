@@ -1,0 +1,22 @@
+<!-- res/drawable/rare_crystal.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Base del cristal (forma más alargada o diferente) -->
+    <item>
+        <rotate android:fromDegrees="0" android:pivotX="50%" android:pivotY="50%">
+            <shape android:shape="rectangle">
+                <solid android:color="@color/primary_dark"/> <!-- Un azul claro o cian para "raro" -->
+                <size android:width="20dp" android:height="30dp"/>
+                <corners android:topLeftRadius="10dp" android:topRightRadius="10dp"
+                    android:bottomLeftRadius="3dp" android:bottomRightRadius="3dp"/>
+                <stroke android:width="1.5dp" android:color="@color/white"/>
+            </shape>
+        </rotate>
+    </item>
+    <!-- Brillo interno -->
+    <item android:gravity="center" android:width="10dp" android:height="15dp">
+        <shape android:shape="oval">
+            <gradient android:type="radial" android:gradientRadius="8dp"
+                android:startColor="#A0FFFFFF" android:endColor="#00FFFFFF"/>
+        </shape>
+    </item>
+</layer-list>

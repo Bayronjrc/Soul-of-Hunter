@@ -418,7 +418,7 @@
                     android:id="@+id/hero_sprite"
                     android:layout_width="120dp"
                     android:layout_height="120dp"
-                    android:src="@drawable/ichigo_sprite"
+                    android:src="@drawable/ichigo_base"
                     android:scaleType="centerCrop"
                     android:layout_marginBottom="8dp" />
 

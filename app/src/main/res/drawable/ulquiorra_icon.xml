@@ -1,0 +1,30 @@
+<!-- drawable/ulquiorra_icon.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24.0"
+    android:viewportHeight="24.0">
+
+    <!-- Base de la cabeza/máscara (simplificada) -->
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M12,2 C15,2 17,4 17,7 C17,10 15,12 12,12 C9,12 7,10 7,7 C7,4 9,2 12,2 Z"/>
+
+    <!-- Cuerno izquierdo -->
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M8,7 L4,3 L6,2 L9,6 Z"/>
+
+    <!-- Cuerno derecho -->
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M16,7 L20,3 L18,2 L15,6 Z"/>
+
+    <!-- Detalle de lágrima (verde) -->
+    <path
+        android:fillColor="#FF008000"
+        android:pathData="M10,13 Q10,16 8,17 L10,18 Z"/>
+    <path
+        android:fillColor="#FF008000"
+        android:pathData="M14,13 Q14,16 16,17 L14,18 Z"/>
+</vector>

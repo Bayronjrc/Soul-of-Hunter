@@ -1,0 +1,21 @@
+<!-- drawable/tome_drop.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24.0"
+    android:viewportHeight="24.0">
+    <!-- Cubierta del libro -->
+    <path
+        android:fillColor="#FF8B4513"
+        android:pathData="M6,3 C4.89,3 4,3.89 4,5 L4,19 C4,20.11 4.89,21 6,21 L18,21 C19.11,21 20,20.11 20,19 L20,5 C20,3.89 19.11,3 18,3 L6,3 Z M6,5 L18,5 L18,19 L6,19 L6,5 Z"/>
+    <!-- Lomo y detalle de páginas -->
+    <path
+        android:fillColor="#FFA0522D"
+        android:pathData="M7,6 L7,18 L9,18 L9,6 Z"/>
+    <path
+        android:fillColor="#FFFFEBCD"
+        android:pathData="M10,6 L17,6 L17,7 L10,7 Z
+                         M10,9 L17,9 L17,10 L10,10 Z
+                         M10,12 L17,12 L17,13 L10,13 Z
+                         M10,15 L17,15 L17,16 L10,16 Z"/>
+</vector>

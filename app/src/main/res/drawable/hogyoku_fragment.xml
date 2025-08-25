@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Nucleo del fragmento -->
+    <item>
+        <shape android:shape="oval">
+            <size android:width="35dp" android:height="35dp"/>
+            <gradient
+                android:type="radial"
+                android:gradientRadius="18dp"
+                android:startColor="#4B0082"
+            android:centerColor="#8A2BE2"
+            android:endColor="#30000000" />
+            <stroke android:width="2dp" android:color="#2E0854" /> <!-- Purple oscuro -->
+        </shape>
+    </item>
+    <!-- Energía crepitante alrededor -->
+    <item>
+        <rotate
+            android:fromDegrees="0"
+            android:toDegrees="360"
+            android:pivotX="50%"
+            android:pivotY="50%"
+            android:drawable="@drawable/hogyoku_sparkle_effect" /> <!-- Necesitarás crear este drawable -->
+    </item>
+</layer-list>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FFF8DC" /> <!-- Color pergamino claro (Cornsilk) -->
+            <corners android:radius="2dp" />
+            <stroke
+                android:width="1dp"
+                android:color="@color/gold" />
+            <size
+                android:width="40dp"
+                android:height="40dp" />
+        </shape>
+    </item>
+    <!-- Pequeñas líneas para simular los bordes enrollados de un pergamino -->
+    <item android:right="35dp" android:left="2dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#D2B48C" /> <!-- Tan (un poco más oscuro) -->
+            <corners android:topLeftRadius="5dp" android:bottomLeftRadius="5dp"/>
+        </shape>
+    </item>
+    <item android:left="35dp" android:right="2dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#D2B48C" /> <!-- Tan -->
+            <corners android:topRightRadius="5dp" android:bottomRightRadius="5dp"/>
+        </shape>
+    </item>
+</layer-list>
+    

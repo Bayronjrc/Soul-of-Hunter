@@ -1,0 +1,22 @@
+<!-- res/drawable/central_fortress.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="60dp"
+    android:height="60dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Base de la fortaleza - Dorado o un gris imponente -->
+    <path
+        android:fillColor="@color/gold"
+        android:pathData="M21,9v10c0,1.1-0.9,2-2,2H5c-1.1,0-2-0.9-2-2V9c0-1.1,0.9-2,2-2h3V4c0-1.1,0.9-2,2-2h6c1.1,0,2,0.9,2,2v3h3C20.1,7,21,7.9,21,9zM7,9h10V5H7V9zM5,19h14V9H5V19z"/>
+
+    <!-- Torre central más alta - Puede usar un blanco o un dorado más claro -->
+    <path
+        android:fillColor="@color/white"
+        android:pathData="M11,10h2v7h-2z"/>
+
+    <!-- Detalles - Almenas, etc. -->
+    <path
+        android:fillColor="#B8860B"
+    android:pathData="M7,12h2v2H7z M15,12h2v2h-2z"/>
+</vector>

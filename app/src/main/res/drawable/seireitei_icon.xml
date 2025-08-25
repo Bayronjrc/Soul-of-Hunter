@@ -1,0 +1,25 @@
+<!-- res/drawable/seireitei_icon.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Base (muro blanco) -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white"/> <!-- Blanco o gris muy claro -->
+            <size android:width="30dp" android:height="30dp"/>
+            <stroke android:width="1dp" android:color="@color/exp_green"/>
+            <corners android:radius="2dp"/>
+        </shape>
+    </item>
+    <!-- "Tejado" de pagoda estilizado -->
+    <item android:gravity="top|center_horizontal" android:width="20dp" android:height="8dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/primary_dark"/> <!-- Azul oscuro o gris para tejado -->
+            <corners android:topLeftRadius="4dp" android:topRightRadius="4dp"/>
+        </shape>
+    </item>
+    <item android:gravity="top|center_horizontal" android:top="7dp" android:width="24dp" android:height="6dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/primary"/>
+            <corners android:topLeftRadius="3dp" android:topRightRadius="3dp"/>
+        </shape>
+    </item>
+</layer-list>

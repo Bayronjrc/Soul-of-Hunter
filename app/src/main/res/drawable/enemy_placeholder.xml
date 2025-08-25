@@ -1,0 +1,29 @@
+<!-- res/drawable/enemy_placeholder.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Silueta base -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/semi_transparent_black"/> <!-- Gris oscuro o negro -->
+            <size android:width="40dp" android:height="40dp"/>
+        </shape>
+    </item>
+    <!-- "Ojos" amenazantes -->
+    <item android:gravity="center_horizontal|top" android:top="10dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/red_hollow"/> <!-- Rojo para los ojos -->
+            <size android:width="6dp" android:height="8dp"/>
+        </shape>
+    </item>
+    <item android:gravity="center_horizontal|top" android:top="10dp" android:left="10dp"> <!-- Ojo izquierdo -->
+        <shape android:shape="oval">
+            <solid android:color="@color/red_hollow"/>
+            <size android:width="6dp" android:height="8dp"/>
+        </shape>
+    </item>
+    <item android:gravity="center_horizontal|top" android:top="10dp" android:right="10dp"> <!-- Ojo derecho -->
+        <shape android:shape="oval">
+            <solid android:color="@color/red_hollow"/>
+            <size android:width="6dp" android:height="8dp"/>
+        </shape>
+    </item>
+</layer-list>

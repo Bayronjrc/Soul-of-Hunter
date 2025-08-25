@@ -1,0 +1,47 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="60dp"
+    android:height="60dp"
+    android:viewportWidth="60"
+    android:viewportHeight="60">
+
+    <!-- Color de fondo semi-transparente para el overlay -->
+    <!-- Puedes ajustar el color y la transparencia (los primeros dos dígitos hexadecimales del color) -->
+    <path
+        android:fillColor="#66000000"
+        android:pathData="M0,0 h60 v60 h-60 z" />
+
+    <!-- Marco "shard" con muescas tipo rompecabezas (simplificado) -->
+    <!-- Aumentamos el grosor del borde y el tamaño de las muescas para que sea más visible en un overlay -->
+    <path
+        android:strokeColor="#B3FFFFFF"
+        android:strokeWidth="3"
+        android:pathData="
+            M3,15
+            L3,3
+            L15,3
+
+            M45,3
+            L57,3
+            L57,15
+
+            M57,45
+            L57,57
+            L45,57
+
+            M15,57
+            L3,57
+            L3,45
+
+            M12,3
+            C9,3 9,7 12,7 S15,3 12,3 Z
+
+            M3,12
+            C3,9 7,9 7,12 S3,15 3,12 Z
+
+            M48,57
+            C51,57 51,53 48,53 S45,57 48,57 Z
+
+            M57,48
+            C57,51 53,51 53,48 S57,45 57,48 Z
+            "/>
+</vector>

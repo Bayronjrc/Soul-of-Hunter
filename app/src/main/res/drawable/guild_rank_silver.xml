@@ -1,0 +1,17 @@
+<!-- res/drawable/guild_rank_silver.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="32dp"
+    android:height="32dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <path
+        android:fillColor="#C0C0C0"
+    android:strokeColor="#A9A9A9"
+    android:strokeWidth="1"
+    android:pathData="M12,2 L2,7 L2,17 L12,22 L22,17 L22,7 Z"/>
+    <!-- Un galón simple en el centro del escudo -->
+    <path
+        android:fillColor="#E0E0E0"
+    android:pathData="M12,6 L10,9 L12,12 L14,9 Z"/>
+</vector>

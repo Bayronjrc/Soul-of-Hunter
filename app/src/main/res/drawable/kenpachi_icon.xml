@@ -1,0 +1,37 @@
+<!-- res/drawable/kenpachi_icon.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Fondo base del ícono -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#F0E68C" /> <!-- Un color piel/amarillento pálido (Khaki) -->
+            <size
+                android:width="24dp"
+                android:height="24dp" />
+            <stroke
+                android:width="1dp"
+                android:color="#4A4A4A" />
+        </shape>
+    </item>
+    <!-- Sugerencia de cabello desordenado o parche -->
+    <item
+        android:gravity="top|center_horizontal"
+        android:top="3dp"
+        android:width="18dp"
+        android:height="8dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#2F4F4F" /> <!-- DarkSlateGray para cabello o parche -->
+            <corners android:topLeftRadius="4dp" android:topRightRadius="4dp" />
+        </shape>
+    </item>
+    <!-- "Cascabel" o detalle -->
+    <item
+        android:gravity="top|right"
+        android:top="2dp"
+        android:right="3dp"
+        android:width="5dp"
+        android:height="5dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/gold" /> <!-- Usando tu @color/gold -->
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,15 @@
+<!-- drawable/tower_enemy_3.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24.0"
+    android:viewportHeight="24.0">
+    <!-- Cabeza -->
+    <path
+        android:fillColor="#FF505050"
+        android:pathData="M12,8m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
+    <!-- Cuerpo simple -->
+    <path
+        android:fillColor="#FF505050"
+        android:pathData="M9,12 h6 v5 h-6 Z"/>
+</vector>

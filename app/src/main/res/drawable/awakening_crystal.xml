@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Faceta 1 (Base) -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/gold" />
+            <corners android:radius="3dp" />
+            <size android:width="35dp" android:height="40dp"/>
+            <stroke android:width="1dp" android:color="#B8860B" /> <!-- DarkGoldenrod -->
+        </shape>
+    </item>
+    <!-- Faceta 2 (Superpuesta y rotada) -->
+    <item android:left="2dp" android:top="2dp" android:right="2dp" android:bottom="2dp">
+        <rotate
+            android:fromDegrees="45"
+            android:pivotX="50%"
+            android:pivotY="50%"
+            android:toDegrees="45">
+            <shape android:shape="rectangle">
+                <solid android:color="#80FFD700" /> <!-- Oro semi-transparente -->
+                <corners android:radius="2dp" />
+                <stroke android:width="1dp" android:color="@color/white" />
+            </shape>
+        </rotate>
+    </item>
+    <!-- Brillo central -->
+    <item android:gravity="center" android:width="15dp" android:height="15dp">
+        <shape android:shape="oval">
+            <solid android:color="#A0FFFFFF" /> <!-- Blanco semi-transparente -->
+        </shape>
+    </item>
+</layer-list>

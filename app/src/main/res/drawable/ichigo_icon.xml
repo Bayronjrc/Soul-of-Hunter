@@ -1,0 +1,26 @@
+<!-- drawable/ichigo_icon.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24.0"
+    android:viewportHeight="24.0">
+
+    <!-- Pelo Naranja (forma simplificada) -->
+    <path
+        android:fillColor="#FFFF8C00"
+        android:pathData="M12,4
+                        C10,4 8,6 8,9
+                        C8,12 10,14 12,14
+                        C14,14 16,12 16,9
+                        C16,6 14,4 12,4 Z
+                        M7,8 L5,10 L7,12 Z
+                        M17,8 L19,10 L17,12 Z
+                        M10,3 L14,3 L12,1 Z"/>
+
+   <path
+        android:fillColor="#FF000000"
+        android:pathData="M10,9m-1,0a1,1 0,1 1,2 0a1,1 0,1 1,-2 0"/>
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M14,9m-1,0a1,1 0,1 1,2 0a1,1 0,1 1,-2 0"/> -->
+</vector>

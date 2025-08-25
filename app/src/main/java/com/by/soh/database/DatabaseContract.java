@@ -177,12 +177,12 @@ public final class DatabaseContract {
                         COLUMN_MAIN_STAT_VALUE + " INTEGER," +
                         COLUMN_SECONDARY_STATS + " TEXT," + // JSON string
                         COLUMN_SET_ID + " INTEGER DEFAULT 0," +
-                        COLUMN_EQUIPPED_BY_HERO + " INTEGER DEFAULT 0," +
+                        COLUMN_EQUIPPED_BY_HERO + " INTEGER DEFAULT NULL," +
                         COLUMN_IS_LOCKED + " INTEGER DEFAULT 0," +
                         COLUMN_POWER_RATING + " INTEGER DEFAULT 0," +
                         COLUMN_OBTAINED_AT + " INTEGER," +
                         "FOREIGN KEY(" + COLUMN_EQUIPPED_BY_HERO + ") REFERENCES " +
-                        PlayerHeroes.TABLE_NAME + "(" + _ID + ")" +
+                        PlayerHeroes.TABLE_NAME + "(" + PlayerHeroes._ID + ")" +
                         ")";
     }
 
@@ -483,7 +483,7 @@ public final class DatabaseContract {
     public static final String[] INITIAL_HERO_TEMPLATES = {
             // Ichigo Kurosaki - Héroe inicial
             "INSERT INTO " + HeroTemplates.TABLE_NAME + " VALUES " +
-                    "(1, 'ichigo_kurosaki', 'Ichigo Kurosaki', 1, 1, 3, 3, 800, 180, 80, 70, 120" +
+                    "(1, 'ichigo_kurosaki', 'Ichigo Kurosaki', 1, 1, 3, 3, 800, 180, 80, 70, 120," +
                     "'Getsuga Tenshō', 'Ataque espiritual básico', " +
                     "'Hollow Mask', 'Incrementa ATK temporalmente', " +
                     "'Mugetsu', 'Ataque devastador que ignora defensa', " +
@@ -491,7 +491,7 @@ public final class DatabaseContract {
 
             // Byakuya Kuchiki
             "INSERT INTO " + HeroTemplates.TABLE_NAME + " VALUES " +
-                    "(2, 'byakuya_kuchiki', 'Byakuya Kuchiki', 1, 3, 4, 4, 750, 170, 90, 85, 110 " +
+                    "(2, 'byakuya_kuchiki', 'Byakuya Kuchiki', 1, 3, 4, 4, 750, 170, 90, 85, 110, " +
                     "'Senbonzakura', 'Ataque múltiple con pétalos', " +
                     "'Senkei', 'Modo crítico aumentado', " +
                     "'Hakuteiken', 'AoE masivo con execution', " +
@@ -499,7 +499,7 @@ public final class DatabaseContract {
 
             // Kenpachi Zaraki
             "INSERT INTO " + HeroTemplates.TABLE_NAME + " VALUES " +
-                    "(3, 'kenpachi_zaraki', 'Kenpachi Zaraki', 1, 1, 6, 4, 900, 200, 70,60, 95" +
+                    "(3, 'kenpachi_zaraki', 'Kenpachi Zaraki', 1, 1, 6, 4, 900, 200, 70,60, 95," +
                     "'Corte Salvaje', 'Más daño cuando está herido', " +
                     "'Sed de Batalla', 'ATK aumenta por cada enemigo derrotado', " +
                     "'Liberación', 'Poder destructivo máximo', " +
@@ -507,7 +507,7 @@ public final class DatabaseContract {
 
             // Grimmjow (Arrancar)
             "INSERT INTO " + HeroTemplates.TABLE_NAME + " VALUES " +
-                    "(4, 'grimmjow_jaegerjaquez', 'Grimmjow Jaegerjaquez', 4, 1, 3, 4, 850, 185, 85,75, 125" +
+                    "(4, 'grimmjow_jaegerjaquez', 'Grimmjow Jaegerjaquez', 4, 1, 3, 4, 850, 185, 85,75, 125," +
                     "'Garra del Pantera', 'Ataque físico con sangrado', " +
                     "'Desgarrón', 'Críticos guaranteed', " +
                     "'Pantera', 'Resurrección completa', " +
@@ -515,7 +515,7 @@ public final class DatabaseContract {
 
             // Uryu Ishida (Quincy)
             "INSERT INTO " + HeroTemplates.TABLE_NAME + " VALUES " +
-                    "(5, 'uryu_ishida', 'Uryū Ishida', 3, 4, 4, 3, 700, 160, 75, 90, 130" +
+                    "(5, 'uryu_ishida', 'Uryū Ishida', 3, 4, 4, 3, 700, 160, 75, 90, 130," +
                     "'Flecha Heilig', 'Ataque de precisión', " +
                     "'Licht Regen', 'Lluvia de flechas', " +
                     "'Quincy: Vollständig', 'Forma final Quincy', " +
