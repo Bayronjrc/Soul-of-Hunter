@@ -18,6 +18,16 @@ public class EquipmentConstants {
             "", "#808080", "#00FF00", "#0080FF", "#8000FF", "#FF8000", "#FF0000"
     };
 
+    public static final int[] RARITY_MULTIPLIERS = {
+            0,  // Placeholder para índice 0
+            1,  // EQUIPMENT_GRAY
+            3,  // EQUIPMENT_GREEN
+            5,  // EQUIPMENT_BLUE
+            8,  // EQUIPMENT_PURPLE
+            12, // EQUIPMENT_ORANGE
+            20  // EQUIPMENT_RED
+    };
+
     // Equipment types
     public static final int EQUIPMENT_WEAPON = 1;        // Zanpakutō/Armas
     public static final int EQUIPMENT_ARMOR = 2;         // Armadura/Ropa
@@ -307,4 +317,11 @@ public class EquipmentConstants {
     }
 
 
+    public static int getRarityMultiplier(int rarity) {
+        if (rarity >= 1 && rarity < RARITY_MULTIPLIERS.length) {
+            return RARITY_MULTIPLIERS[rarity];
+        }
+        // Valor por defecto o manejo de error si la rareza no está en el array
+        return 1; // O podrías lanzar IllegalArgumentException
+    }
 }
