@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.by.soh.R;
+import com.by.soh.managers.PlayerDataManager;
+import com.by.soh.managers.SaveGameManager;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
@@ -30,7 +32,9 @@ public class MainActivity extends AppCompatActivity {
 
     // Managers
     private EquipmentManager equipmentManager;
+    private PlayerDataManager playerDataManager;
 
+    private SaveGameManager saveManager;
     // Data
     private List<Equipment> allEquipment = new ArrayList<>();
     private List<Equipment> testEquipment = new ArrayList<>();
@@ -42,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
 
         // Inicializar managers
         equipmentManager = EquipmentManager.getInstance(this);
-
+        playerDataManager = PlayerDataManager.getInstance(this);
+        saveManager = SaveGameManager.getInstance(this);
         // Inicializar UI
         initializeViews();
 
@@ -76,7 +81,11 @@ public class MainActivity extends AppCompatActivity {
             // Tu código de prueba exacto
             long itemId = equipmentManager.createRandomEquipment(3, 5, 25);
             Equipment item = equipmentManager.getEquipmentById(itemId);
+            playerDataManager.addGold(5000);
+            playerDataManager.addExperience(1000);
 
+            SaveGameManager.SaveResult result = saveManager.saveGame("test_save", true);
+            Log.d("TEST", result.toString());
             if (item != null) {
                 Log.d("TEST", item.getDescription());
 
