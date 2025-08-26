@@ -1,0 +1,37 @@
+<!-- res/drawable/byakuya_icon.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Fondo base del ícono -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#E0E0E0" /> <!-- Un gris claro o blanco para la nobleza/bufanda -->
+            <size
+                android:width="24dp"
+                android:height="24dp" />
+            <stroke
+                android:width="1dp"
+                android:color="#A0A0A0" /> <!-- Borde gris oscuro -->
+        </shape>
+    </item>
+    <!-- Elemento que sugiere Senbonzakura o su cabello oscuro -->
+    <item
+        android:left="6dp"
+        android:right="6dp"
+        android:top="4dp"
+        android:bottom="10dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#333333" /> <!-- Color oscuro para el cabello/contraste -->
+            <corners android:radius="2dp"/>
+        </shape>
+    </item>
+    <!-- Pequeños "pétalos" o detalles -->
+    <item android:gravity="bottom|left" android:left="5dp" android:bottom="5dp" android:width="4dp" android:height="4dp">
+        <shape android:shape="oval">
+            <solid android:color="#FFB6C1" /> <!-- Rosa claro para pétalo -->
+        </shape>
+    </item>
+    <item android:gravity="bottom|right" android:right="5dp" android:bottom="7dp" android:width="3dp" android:height="3dp">
+        <shape android:shape="oval">
+            <solid android:color="#FFB6C1" /> <!-- Rosa claro para pétalo -->
+        </shape>
+    </item>
+</layer-list>

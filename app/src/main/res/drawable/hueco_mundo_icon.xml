@@ -1,0 +1,30 @@
+<!-- res/drawable/hueco_mundo_icon.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Fondo (arena/noche) -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/primary_dark"/> <!-- Azul muy oscuro o negro -->
+            <size android:width="32dp" android:height="32dp"/>
+        </shape>
+    </item>
+    <!-- Luna (no necesariamente rota, pero presente) -->
+    <item android:gravity="top|right" android:top="4dp" android:right="4dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/white"/> <!-- Blanco o blanco hueso -->
+            <size android:width="12dp" android:height="12dp"/>
+        </shape>
+    </item>
+    <!-- "Árboles" de cuarzo o dunas estilizadas -->
+    <item android:gravity="bottom|left" android:left="5dp" android:bottom="3dp" android:width="6dp" android:height="15dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/exp_green"/> <!-- Blanco o gris muy pálido -->
+            <corners android:topLeftRadius="3dp" android:topRightRadius="3dp"/>
+        </shape>
+    </item>
+    <item android:gravity="bottom|right" android:right="8dp" android:bottom="3dp" android:width="5dp" android:height="12dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/exp_green"/>
+            <corners android:topLeftRadius="2dp" android:topRightRadius="2dp"/>
+        </shape>
+    </item>
+</layer-list>

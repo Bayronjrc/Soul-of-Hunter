@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Base del fragmento - forma ligeramente irregular -->
+    <item>
+        <rotate
+            android:fromDegrees="15"
+            android:pivotX="50%"
+            android:pivotY="50%"
+            android:toDegrees="15">
+            <shape android:shape="rectangle">
+                <solid android:color="#A0C4FF" /> <!-- Un azul claro espiritual, puedes ajustarlo -->
+                <corners android:radius="4dp" />
+                <size
+                    android:width="30dp"
+                    android:height="35dp" />
+                <stroke android:width="1dp" android:color="#E0EFFF" />
+            </shape>
+        </rotate>
+    </item>
+    <!-- Brillo interior -->
+    <item android:gravity="center" android:width="20dp" android:height="20dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="10dp"
+                android:startColor="#80FFFFFF"
+                android:centerColor="#50FFFFFF"
+                android:endColor="#00FFFFFF" />
+        </shape>
+    </item>
+</layer-list>

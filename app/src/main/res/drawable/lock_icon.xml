@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Cuerpo del candado -->
+    <item android:top="10dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white" /> <!-- Color del candado -->
+            <size
+                android:width="20dp"
+                android:height="14dp" />
+            <corners android:radius="3dp" />
+        </shape>
+    </item>
+    <!-- Arco del candado -->
+    <item android:bottom="10dp" android:left="3dp" android:right="3dp">
+        <shape android:shape="oval">
+            <stroke
+                android:width="3dp"
+                android:color="@color/white" /> <!-- Color del candado -->
+            <size
+                android:width="14dp"
+                android:height="14dp" />
+        </shape>
+    </item>
+    <!-- Cubrir la parte inferior del óvalo para hacer el arco -->
+    <item android:top="10dp" android:left="3dp" android:right="3dp" android:bottom="0dp" >
+        <shape android:shape="rectangle">
+           </shape>
+    </item>
+</layer-list>

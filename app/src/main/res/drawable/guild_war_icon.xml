@@ -1,0 +1,31 @@
+<!-- res/drawable/guild_war_icon.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:tint="@color/text_hint"> <!-- O un rojo/naranja si quieres más impacto -->
+
+    <!-- Espada 1 -->
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M14.121,9.879l-2.121,-2.121l7,-7l2.121,2.121l-7,7zM3.515,18.364l2.121,-2.121l2.121,2.121l-2.121,2.121z"/>
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M4.929,19.778l-1.414,-1.414l7.071,-7.071l1.414,1.414z"/>
+
+    <!-- Espada 2 (cruzada) -->
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M9.879,14.121l2.121,2.121l7,-7l-2.121,-2.121l-7,7zM18.364,3.515l-2.121,2.121l-2.121,-2.121l2.121,-2.121z"/>
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M19.778,4.929l1.414,1.414l-7.071,7.071l-1.414,-1.414z"/>
+
+
+     <path
+        android:fillColor="#80FFFFFF"
+        android:pathData="M12,2L4,5v6c0,5.55 3.84,10.74 9,12 5.16-1.26 9-6.45 9-12V5l-8-3z"
+        android:strokeAlpha="0.5"
+        android:fillAlpha="0.3" />
+</vector>

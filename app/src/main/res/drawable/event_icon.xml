@@ -1,0 +1,43 @@
+<!-- res/drawable/event_icon.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Base como un calendario -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/primary_dark"/> <!-- Un azul para eventos -->
+            <size android:width="28dp" android:height="28dp"/>
+            <corners android:radius="3dp"/>
+            <stroke android:width="1.5dp" android:color="@color/white"/>
+        </shape>
+    </item>
+    <!-- "Anillas" del calendario -->
+    <item android:gravity="top|center_horizontal" android:top="2dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white"/>
+            <size android:width="4dp" android:height="3dp"/>
+        </shape>
+    </item>
+    <item android:gravity="top|center_horizontal" android:top="2dp" android:left="8dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white"/>
+            <size android:width="4dp" android:height="3dp"/>
+        </shape>
+    </item>
+    <item android:gravity="top|center_horizontal" android:top="2dp" android:right="8dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white"/>
+            <size android:width="4dp" android:height="3dp"/>
+        </shape>
+    </item>
+    <!-- Exclamación o número del día -->
+    <item android:gravity="center" android:width="4dp" android:height="10dp" android:bottom="1dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/gold"/>
+            <corners android:radius="2dp"/>
+        </shape>
+    </item>
+    <item android:gravity="bottom|center_horizontal" android:bottom="4dp" android:width="4dp" android:height="4dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/gold"/>
+        </shape>
+    </item>
+</layer-list>

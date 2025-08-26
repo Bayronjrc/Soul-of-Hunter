@@ -269,7 +269,7 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/crystal_material"
+                        android:src="@drawable/material_crystal"
                         android:background="@drawable/rarity_rare_bg"
                         android:scaleType="centerCrop" />
 
@@ -313,7 +313,7 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/tome_material"
+                        android:src="@drawable/material_tome"
                         android:background="@drawable/rarity_epic_bg"
                         android:scaleType="centerCrop" />
 

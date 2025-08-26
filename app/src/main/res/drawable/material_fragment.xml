@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#B0B0B0" /> <!-- Un color gris para fragmento -->
+    <corners android:radius="6dp" />
+    <stroke
+        android:width="2dp"
+        android:color="@color/white"
+        android:dashWidth="4dp"
+        android:dashGap="2dp" /> <!-- Borde discontinuo -->
+    <size
+        android:width="40dp"
+        android:height="40dp" />
+</shape>

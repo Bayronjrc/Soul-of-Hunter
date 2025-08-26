@@ -1,0 +1,19 @@
+<!-- res/drawable/gotei_13_logo.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="60dp"
+    android:height="60dp"
+    android:viewportWidth="60"
+    android:viewportHeight="60">
+
+    <!-- Fondo circular (simulando el circular_frame_gold) -->
+    <path
+        android:fillColor="@color/gold"
+        android:pathData="M30,30m-28,0a28,28 0,1 1,56 0a28,28 0,1 1,-56 0"/>
+
+    <!-- Elemento central simple - Ejemplo: una flor estilizada o un número romano XIII -->
+    <!-- Esto es un ejemplo muy abstracto, idealmente tendrías el logo real como PNG -->
+    <path
+        android:fillColor="@color/white"
+        android:pathData="M30,15 L35,25 L45,25 L37,32 L40,42 L30,35 L20,42 L23,32 L15,25 L25,25 Z"/>
+    <!-- Este path es una estrella simple, reemplaza con algo más adecuado -->
+</vector>

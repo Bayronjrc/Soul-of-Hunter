@@ -1,0 +1,13 @@
+<!-- drawable/nav_fight_icon.xml (Espadas cruzadas) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24.0"
+    android:viewportHeight="24.0">
+    <path
+        android:fillColor="#FFCCCCCC"
+        android:pathData="M20.71,3.41l-2.12,-2.12c-0.39,-0.39 -1.02,-0.39 -1.41,0L3.29,15.17c-0.39,0.39 -0.39,1.02 0,1.41l2.12,2.12c0.2,0.2 0.45,0.29 0.71,0.29s0.51,-0.1 0.71,-0.29L20.71,4.83c0.39,-0.39 0.39,-1.03 0,-1.42zM5.41,16.59L4,18l6,0 0,-1.41L5.41,16.59zM19.29,4.17l-1.41,1.41 -1.41,-1.41 1.41,-1.41 1.41,1.41z"/>
+    <path
+        android:fillColor="#FFCCCCCC"
+        android:pathData="M3.29,20.71l2.12,2.12c0.39,0.39 1.02,0.39 1.41,0l13.88,-13.88c0.39,-0.39 0.39,-1.02 0,-1.41l-2.12,-2.12c-0.2,-0.2 -0.45,-0.29 -0.71,-0.29s-0.51,0.1 -0.71,0.29L3.29,19.29c-0.39,0.39 -0.39,1.03 0,1.42zM18.59,7.41L18,6l-6,0 0,1.41L18.59,7.41zM4.71,19.83l1.41,-1.41 1.41,1.41 -1.41,1.41 -1.41,-1.41z"/>
+</vector>

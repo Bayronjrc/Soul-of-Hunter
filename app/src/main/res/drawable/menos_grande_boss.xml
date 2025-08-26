@@ -1,0 +1,25 @@
+<!-- res/drawable/menos_grande_boss_placeholder.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Sombra sutil (opcional) -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#40000000" /> <!-- Sombra oscura semi-transparente -->
+        </shape>
+    </item>
+
+    <!-- Cuerpo principal del "jefe" -->
+    <item android:bottom="2dp" android:right="1dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/red_hollow" /> <!-- Color principal del jefe -->
+            <stroke android:width="2dp" android:color="@color/orange" />
+        </shape>
+    </item>
+
+    <!-- Detalle o "máscara" simple -->
+    <item android:gravity="center" android:width="60dp" android:height="30dp" android:top="15dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white" />
+            <corners android:radius="5dp"/>
+        </shape>
+    </item>
+</layer-list>
