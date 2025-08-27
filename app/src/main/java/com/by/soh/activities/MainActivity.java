@@ -10,8 +10,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.by.soh.R;
+import com.by.soh.managers.HeroManager;
 import com.by.soh.managers.PlayerDataManager;
 import com.by.soh.managers.SaveGameManager;
+import com.by.soh.models.HeroStats;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
@@ -33,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
     // Managers
     private EquipmentManager equipmentManager;
     private PlayerDataManager playerDataManager;
-
     private SaveGameManager saveManager;
+    private HeroManager heroManager;
     // Data
     private List<Equipment> allEquipment = new ArrayList<>();
     private List<Equipment> testEquipment = new ArrayList<>();
@@ -48,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
         equipmentManager = EquipmentManager.getInstance(this);
         playerDataManager = PlayerDataManager.getInstance(this);
         saveManager = SaveGameManager.getInstance(this);
+        heroManager = HeroManager.getInstance(this);
+
         // Inicializar UI
         initializeViews();
 
@@ -86,6 +90,27 @@ public class MainActivity extends AppCompatActivity {
 
             SaveGameManager.SaveResult result = saveManager.saveGame("test_save", true);
             Log.d("TEST", result.toString());
+
+            long newHeroId = heroManager.createHeroFromTemplate("byakuya_kuchiki", 3, 0);
+            HeroStats stats = heroManager.calculateHeroStats(newHeroId, true, true);
+            Log.d("POWER", "Poder total: " + stats.calculateTotalPower());
+
+            boolean success = heroManager.enhanceHero(newHeroId);
+
+// Añadir experiencia
+            HeroManager.LevelUpResult result1 = heroManager.addExperienceToHero(newHeroId, 1000);
+            if (result1.leveledUp) {
+                Log.i("LEVELUP", "¡Subió " + result1.levelsGained + " niveles!");
+            }
+            String stat = heroManager.getHeroById(newHeroId).toString();
+            Log.d("GOL", stat);
+            HeroManager.HeroCollectionStats stats1 = heroManager.getCollectionStats();
+
+// Análisis de equipo
+            HeroManager.TeamSynergyAnalysis synergy = heroManager.analyzeTeamSynergy();
+            Log.d("SYNERGY", "Puntuación: " + synergy.synergyScore);
+            Log.d("MAMADA", stat);
+
             if (item != null) {
                 Log.d("TEST", item.getDescription());
 
